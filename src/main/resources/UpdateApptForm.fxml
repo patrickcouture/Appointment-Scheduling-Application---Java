@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: bdb76b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateApptFormController">
+   <children>
+      <VBox layoutX="69.0" layoutY="6.0" prefHeight="600.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="updateApptFormLabel" text="Update Appointment">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="65.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptIdLabel" text="Appt. ID">
+                     <HBox.margin>
+                        <Insets left="45.0" top="35.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateApptIDTxtFld" disable="true" editable="false" prefHeight="25.0" prefWidth="184.0" promptText="Appt ID - Auto-generated">
+                     <HBox.margin>
+                        <Insets left="70.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptTitleLabel" text="Title">
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateApptTitleTxtFld" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="94.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptDescLabel" text="Description">
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="updateApptDescTxtFld" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptLocationLabel" text="Location">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin></Label>
+                  <ComboBox fx:id="updateApptLocationComBx" onAction="#onActionUpdateApptLocationComBx" prefHeight="25.0" prefWidth="183.0">
+                     <HBox.margin>
+                        <Insets left="71.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptContactLabel" text="Contact">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateApptContactComBx" onAction="#onActionUpdateApptContactComBx" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptTypeLabel" text="Type">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateApptTypeComBx" onAction="#onActionUpdateApptTypeComBx" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="90.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptStartDateLabel" text="Start Date">
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="updateApptStartDatePkr" onAction="#onActionUpdateApptStartDatePkr" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptStartTimeLabel" text="Start Time">
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="updateApptStartTimeComBx" onAction="#onActionUpdateApptStartTimeComBx" prefHeight="25.0" prefWidth="184.0">
+                     <HBox.margin>
+                        <Insets left="59.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptEndDateLabel" text="End Date">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="updateApptEndDatePkr" onAction="#onActionUpdateApptEndDatePkr" prefHeight="25.0" prefWidth="185.0">
+                     <HBox.margin>
+                        <Insets left="67.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptEndTimeLabel" text="End Time">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateApptEndTimeComBx" onAction="#onActionUpdateApptEndTimeComBx" prefHeight="25.0" prefWidth="185.0">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptCustIdLabel" text="Customer ID">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateApptCustIdComBx" onAction="#onActionUpdateApptCustIdComBx" prefHeight="25.0" prefWidth="186.0">
+                     <HBox.margin>
+                        <Insets left="47.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateApptUserIdLabel" text="User ID">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateApptUserIdComBx" onAction="#onActionupdateUserIdComBx" prefHeight="25.0" prefWidth="186.0">
+                     <HBox.margin>
+                        <Insets left="76.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="updateApptSaveBtn" mnemonicParsing="false" onAction="#onActionupdateApptSaveBtn" text="Save">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateApptCancelBtn" mnemonicParsing="false" onAction="#onActionUpdateApptCancelBtn" text="Cancel">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

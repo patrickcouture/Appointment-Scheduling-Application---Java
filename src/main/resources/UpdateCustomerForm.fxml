@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: bdb76b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomerFormController">
+   <children>
+      <VBox layoutX="6.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="updateCustomerFormLabel" text="Update Customer">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin></Label>
+            <HBox prefHeight="65.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustIdLabel" text="Customer ID">
+                     <HBox.margin>
+                        <Insets left="35.0" top="35.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="updateCustIdTxtFld" disable="true" prefHeight="25.0" prefWidth="175.0" promptText="Auto-Generated">
+                     <HBox.margin>
+                        <Insets left="71.0" top="30.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustNameLabel" text="Name">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updateCustNameTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustAddressLabel" text="Address">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updateCustAddressTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="98.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustPhoneLabel" text="Phone Number">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updateCustPhoneTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="58.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustCountryLabel" text="Country">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateCustCountryComBx" onAction="#onActionUpdateCustCountryComBx" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="98.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustStateLabel" text="Province / State">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="updateCustStateComBx" onAction="#onActionUpdateCustStateComBx" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="51.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="updateCustPostalLabel" text="Postal Code">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="updateCustPostalTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="updateCustSaveBtn" mnemonicParsing="false" onAction="#onActionUpdateCustSaveBtn" text="Save">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateCustCancelBtn" mnemonicParsing="false" onAction="#onActionUpdateCustCancelBtn" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

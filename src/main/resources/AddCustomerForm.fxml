@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: bdb76b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <VBox layoutX="6.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="addCustomerFormLabel" text="Add Customer">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin></Label>
+            <HBox prefHeight="65.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustIdLabel" text="Customer ID">
+                     <HBox.margin>
+                        <Insets left="35.0" top="35.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="addCustIdTxtFld" disable="true" prefHeight="25.0" prefWidth="175.0" promptText="Auto-Generated">
+                     <HBox.margin>
+                        <Insets left="71.0" top="30.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustNameLabel" text="Name">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addCustNameTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustAddressLabel" text="Address">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addCustAddressTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="98.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustPhoneLabel" text="Phone Number">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addCustPhoneTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="58.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustCountryLabel" text="Country">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="addCustCountryComBx" onAction="#onActionAddCustCountryComBx" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="98.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustStateLabel" text="Province / State">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="addCustStateComBx" onAction="#onActionAddCustStateComBx" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="51.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="addCustPostalLabel" text="Postal Code">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addCustPostalTxtFld" prefHeight="25.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addCustSaveBtn" mnemonicParsing="false" onAction="#onActionAddCustSaveBtn" text="Save">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addCustCancelBtn" mnemonicParsing="false" onAction="#onActionAddCustCancelBtn" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

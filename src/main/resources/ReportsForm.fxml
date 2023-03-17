@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: bdb76b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <VBox layoutX="94.0" layoutY="78.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="reportsFormLabel" text="Reports">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefHeight="0.0" prefWidth="700.0">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Separator>
+            <Label fx:id="apptsByTypeMonthReportLabel" prefHeight="22.0" prefWidth="353.0" text="Customer Appointments by Type &amp; Month Report" textAlignment="CENTER">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="175.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="45.0" prefWidth="700.0">
+               <children>
+                  <Label fx:id="typeMonthTypeLabel" text="Type">
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="typeMonthTypeComBx" onAction="#onActionTypeMonthTypeComBx" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label fx:id="typeMonthLabel" text="Month">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="typeMonthComBx" onAction="#onActionTypeMonthComBx" prefHeight="25.0" prefWidth="133.0" />
+                  <Label fx:id="totalAppointmentsLabel" text="Total Appointments:">
+                     <HBox.margin>
+                        <Insets left="25.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#onActionCreateApptTypeMonth" prefHeight="30.0" prefWidth="51.0" text="CREATE REPORT" wrapText="true">
+                     <font>
+                        <Font name="Tahoma" size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="totalApptsResultTxt" text="Label">
+                     <HBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="customersByStateLabel" prefHeight="39.0" prefWidth="273.0" text="Customers by Province / State Report">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="215.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="45.0" prefWidth="700.0">
+               <children>
+                  <Label fx:id="custByStateCountryLabel" text="Country">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="custByStateCountryComBx" onAction="#onActionCustByStateCountryComBx" prefHeight="25.0" prefWidth="84.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label fx:id="custByStateProvLabel" prefHeight="25.0" prefWidth="99.0" text="Province / State">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="custByStateProvComBox" onAction="#onActionCustByStateProvComBox" prefHeight="25.0" prefWidth="132.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label fx:id="totalCustomersLabel" text="Total Customers:">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#onActionCustByState" prefHeight="30.0" prefWidth="52.0" text="CREATE REPORT" wrapText="true">
+                     <font>
+                        <Font name="Tahoma" size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="totalCustomersResultTxt" text="Label">
+                     <HBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="contactScheduleReportLabel" prefHeight="34.0" prefWidth="191.0" text="Contact Schedule Report">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="245.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="34.0" prefWidth="700.0">
+               <children>
+                  <Label fx:id="chooseContactLabel" text="Choose a Contact">
+                     <HBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="chooseContactComBx" onAction="#onActionchooseContactComBx" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#onActionViewContactSchedule" text="View Schedule">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="contactScheduleTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="contactScheduleApptIdCol" prefWidth="62.0" text="Appt ID" />
+                <TableColumn fx:id="contactScheduleTitleCol" prefWidth="90.0" text="Title" />
+                  <TableColumn fx:id="contactScheduleTypeCol" prefWidth="88.0" text="Type" />
+                  <TableColumn fx:id="contactScheduleDescCol" prefWidth="158.0" text="Description" />
+                  <TableColumn fx:id="contactScheduleStartCol" prefWidth="109.0" text="Start Date / Time" />
+                  <TableColumn fx:id="contactScheduleEndCol" prefWidth="105.0" text="End Date / Time" />
+                  <TableColumn fx:id="contactScheduleCustIdCol" prefWidth="56.0" text="Cust ID" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="60.0" prefWidth="700.0">
+               <children>
+                  <Button fx:id="reportsPreviousBtn" mnemonicParsing="false" onAction="#onActionReportsPreviousBtn" text="Previous">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="200.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="reportsLogoutBtn" mnemonicParsing="false" onAction="#onActionReportsLogoutBtn" text="Logout">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="175.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

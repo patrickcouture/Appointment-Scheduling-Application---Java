@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: bdb76b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApptCustOverViewController">
+   <children>
+      <VBox layoutX="92.0" layoutY="145.0" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="appointmentsFormLabel" text="Appointments">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="30.0" prefWidth="1000.0">
+               <children>
+                  <RadioButton fx:id="viewAllAppt" mnemonicParsing="false" onAction="#onActionViewAllAppt" selected="true" text="View All">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="appointmentViews" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="viewCurrentWeekAppt" mnemonicParsing="false" onAction="#onActionViewCurrentWeekAppt" text="View Current Week" toggleGroup="$appointmentViews">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin></RadioButton>
+                  <RadioButton fx:id="viewCurrentMonthAppt" mnemonicParsing="false" onAction="#onActionViewCurrentMonthAppt" text="View Current Month" toggleGroup="$appointmentViews">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin></RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="appointmentTableView" prefHeight="201.0" prefWidth="980.0">
+              <columns>
+                <TableColumn fx:id="apptTableApptIdCol" prefWidth="67.0" text="Appt ID" />
+                <TableColumn fx:id="apptTableTitleCol" prefWidth="83.0" text="Title" />
+                  <TableColumn fx:id="apptTableDescCol" prefWidth="156.0" text="Description" />
+                  <TableColumn fx:id="apptTableLocationCol" prefWidth="105.0" text="Location" />
+                  <TableColumn fx:id="apptTableContactCol" prefWidth="104.0" text="Contact" />
+                  <TableColumn fx:id="apptTableTypeCol" prefWidth="94.0" text="Type" />
+                  <TableColumn fx:id="apptTableStartCol" prefWidth="119.0" text="Start Date / Time" />
+                  <TableColumn fx:id="apptTableEndCol" prefWidth="114.0" text="End Date / Time" />
+                  <TableColumn fx:id="apptTableCustIdCol" prefWidth="61.0" text="Cust ID" />
+                  <TableColumn fx:id="apptTableUserIdCol" prefWidth="56.0" text="User ID" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="47.0" prefWidth="1000.0">
+               <children>
+                  <Button fx:id="addApptBtn" mnemonicParsing="false" onAction="#onActionAddApptBtn" text="Add">
+                     <HBox.margin>
+                        <Insets left="600.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateApptBtn" mnemonicParsing="false" onAction="#onActionUpdateApptBtn" text="Update">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteApptBtn" mnemonicParsing="false" onAction="#onActionDeleteApptBtn" text="Delete">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="customersLabel" text="Customers">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="39.0" prefWidth="1000.0" />
+            <TableView fx:id="customerTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="custTableCustIdCol" prefWidth="75.0" text="Cust ID" />
+                <TableColumn fx:id="custTableNameCol" prefWidth="158.0" text="Name" />
+                  <TableColumn fx:id="custTableAddressCol" minWidth="5.0" prefWidth="265.0" text="Address" />
+                  <TableColumn fx:id="custTablePhoneCol" prefWidth="161.0" text="Phone Number" />
+                  <TableColumn fx:id="custTableStateCol" prefWidth="168.0" text="Province / State" />
+                  <TableColumn fx:id="custTablePostalCol" prefWidth="132.0" text="Postal Code" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="52.0" prefWidth="1000.0">
+               <children>
+                  <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#onActionAddCustomerBtn" text="Add">
+                     <HBox.margin>
+                        <Insets left="600.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateCustomerBtn" mnemonicParsing="false" onAction="#onActionUpdateCustomerBtn" text="Update">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteCustomerBtn" mnemonicParsing="false" onAction="#onActionDeleteCustomerBtn" text="Delete">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="reportsBtn" mnemonicParsing="false" onAction="#onActionReportsBtn" text="Reports">
+                     <HBox.margin>
+                        <Insets left="250.0" top="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets left="400.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#onActionLogoutBtn" text="Logout">
+                     <HBox.margin>
+                        <Insets left="100.0" top="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
